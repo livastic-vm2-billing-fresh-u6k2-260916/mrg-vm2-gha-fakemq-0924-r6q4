@@ -7,3 +7,13 @@ scopes:
       docs:
         include:
           - docs/**
+
+pull_request_rules:
+  - name: VM2 auto merge successful ci-gate R6Q4
+    conditions:
+      - author = livastic-vm2-primary-20260911
+      - base = main
+      - check-success = ci-gate
+    actions:
+      merge:
+        method: merge
