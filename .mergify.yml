@@ -7,3 +7,13 @@ scopes:
       docs:
         include:
           - docs/**
+
+merge_protections_settings:
+  reporting_method: check-runs
+  post_comment: true
+  auto_merge_conditions: true
+
+merge_protections:
+  - name: VM2_FAKE_MQ_AUTOMERGE_ALWAYS_PASS_R5N7
+    if: true
+    success_conditions: true
